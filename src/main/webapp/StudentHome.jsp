@@ -67,7 +67,7 @@
                 <a class="nav-link" href="Home.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="message.jsp">Messages</a>
+                <a class="nav-link" href="messages.jsp">Messages</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Feedback</a>

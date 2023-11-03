@@ -3,14 +3,14 @@ package SMMS.user;
 import java.sql.Date;
 
 public class Message {
-	    private int id;
+	    private int userId;
 	    private String senderId;
 	    private String receiverId;
 	    private String content;
 	    private Date timestamp;
 	    private boolean isRead;
-		public int getId() {
-			return id;
+		public int getUserId() {
+			return userId;
 		}
 		public String getSenderId() {
 			return senderId;
@@ -27,8 +27,8 @@ public class Message {
 		public boolean isRead() {
 			return isRead;
 		}
-		public void setId(int id) {
-			this.id = id;
+		public void setUserId(int userId) {
+			this.userId = userId;
 		}
 		public void setSenderId(String senderId) {
 			this.senderId = senderId;
@@ -47,7 +47,7 @@ public class Message {
 		}
 		@Override
 		public String toString() {
-			return "Message[id="+id+",senderId="+senderId+",receiverId="+receiverId+",content="+content+",timestamp="+timestamp+",isRead="+isRead+"]";
+			return "Message[userId="+userId+",senderId="+senderId+",receiverId="+receiverId+",content="+content+",timestamp="+timestamp+",isRead="+isRead+"]";
 		}
 
 	}

@@ -18,13 +18,13 @@
     <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="Home.jsp">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="design.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="Login.jsp">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Register.jsp">Register</a>
+                <a class="nav-link" href="Register.jsp">SignUp</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -68,7 +68,7 @@
                             <a href="PasswordRecovery.jsp">Forgot Password?</a>
                         </div>
                         <div class="text-center mt-3">
-                            <a href="Register.jsp">Don't have an account? Register here.</a>
+                            <a href="Register.jsp">Don't have an account?SignUp here.</a>
                         </div>
                     </form>
                 </div>

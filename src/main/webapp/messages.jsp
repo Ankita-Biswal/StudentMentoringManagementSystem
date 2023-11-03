@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="java.util.List, SMMS.user.Message" %>
-<%@ page import="SMMS.dao.MessageDAO" %>
+<%@ page import="java.util.*, SMMS.user.Message" %>
 
 <!DOCTYPE html>
 <html>
@@ -67,7 +66,7 @@
                 <a class="nav-link" href="Home.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="success.jsp">viewmessage</a>
+                <a class="nav-link" href="Sessions.jsp">Session</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Feedback</a>
@@ -83,13 +82,17 @@
     </div>
 </nav>
 <!-- End navbar -->
-   
-
-        <form action="<%= request.getContextPath() %>/Message" method="post">
-            <input type="text" name="content" placeholder="Type your message" />
-            <input type="submit" value="Send" />
-        </form>
+<div align="center">
+        <%
+    Message messages = (Message)request.getAttribute("messages");
+    if (messages!= null) {
+    %>
+    <h1>HII<%= messages.getContent()%></h1>
+    <%
+    } %>
     </div>
+    
+</table>
 </div>
 </body>
 </html>
