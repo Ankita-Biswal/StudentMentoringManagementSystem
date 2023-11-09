@@ -22,6 +22,41 @@
             max-width: 100%;
             height: auto;
         }
+ 
+.container {
+    width: 100%;
+    max-width: 200px; 
+    background-color: transparent;
+    padding: 5px;
+    margin: 0 auto; 
+}
+
+
+.achievement-img img {
+    width: 50%;
+    height: auto;
+    display: block; 
+}
+
+
+
+p {
+    font-size: 25px; 
+    line-height: 1.5; 
+    text-align: center; 
+    margin: 20px 0; 
+    color: #ffff; 
+    padding:1px
+}
+
+
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 400px; 
+    }
+}
+  
 
         .container {
             max-width: 1200px;
@@ -65,6 +100,7 @@
             .achievement {
                 padding: 10px;
             }
+           
         }
     </style>
 </head>
@@ -72,7 +108,21 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-custom1">
     <a class="navbar-brand" href="#"><img src="images/Logo.png" height="40" weight="40"></a>
     </nav>
-    <div class="container">
+  <div class="container" style="width: 300px; height: 300px; background-color: transparent; padding:5px">
+    <div class="achievement">
+        <div class="achievement-img">
+            <img src="images/naaca.png" style="width: 100%; height: 100%;">
+        </div>
+    </div>
+</div>
+           <p>Centurion university has been 'A' grade by National Assessment and Accreditation Council (NAAC)</p>
+        </div>
+    </div>
+</div>
+
+            
+    
+    
         <div class="achievement">
             <div class="achievement-img">
                 <img src="images/achievement1.png" alt="Achievement 1">
@@ -80,19 +130,19 @@
             <h2>Achievement Title 1</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod sit amet libero vel tincidunt.</p>
         </div>
-        <div class "achievement">
+        <div class ="achievement">
             <div class="achievement-img">
                 <img src="images/achievement-2.png" alt="Achievement 2">
             </div>
             <h2>Achievement Title 2</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod sit amet libero vel tincidunt.</p>
         </div>
-        <div class "achievement">
+        <div class ="achievement">
             <div class="achievement-img">
-                <img src="images/achievement-3.png" alt="Achievement 3">
+                <img src="images/achievement-4.png" alt="Achievement 3">
             </div>
-            <h2>Achievement Title 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod sit amet libero vel tincidunt.</p>
+            <h2>Bhubaneswar (Odisha): Veteran actor and Makkal Needhi Maiam chief Kamal Haasan was conferred an honorary doctorate for his contribution to cinema, on November 19 in Bhubaneswar. The chief minister of Odisha, Naveen Patnaik, presented the doctorate degree to Haasan at an event.</h2>
+            
         </div>
     </div>
 </body>

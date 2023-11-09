@@ -81,6 +81,30 @@
     </div>
 </nav>
 <!-- End navbar -->
+<h3>Prof. Mukti Kanta Mishra</h3>
+<div class="container" style="width: 300px; height: 300px; background-color: transparent; padding:5px">
+    <div class="achievement">
+        <div class="achievement-img">
+            <img src="images/mukti-sir.png" style="width: 100%; height: 100%;">
+        </div>
+    </div>
+</div>
+
+   <p> Dr. Mishra in his endeavor to explore entrepreneurial capability, as a Director of Consulting Firm along with three professors had taken over the management of one Engineering College in 2005. The engineering college (Jagannath Institute for Technology & Management (JITM), Paralakhemundi) located in a remote rural area of the poorest district of Orissa, is All India Council for Technical Education (AICTE) approved. At that time, it had seven academic departments and 420 seats, and was faced with reduced intake, poor academic performance and placement problems. Dr. Mishra has taken it as a mission of life and real time personal social responsibility to turn around this college and place it at a national level through qualitative improvement in curricular, co-curricular and extra-curricular activities. </p>
+        </div>
+    </div>
+</div>
+<h3>Jagannath Padhi</h3>
+<div class="container" style="width: 300px; height: 300px; background-color: transparent; padding:5px">
+    <div class="achievement">
+        <div class="achievement-img">
+            <img src="images/Jagannath-Padhi.png" style="width: 100%; height: 100%;">
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
     
 </div>
 </body>

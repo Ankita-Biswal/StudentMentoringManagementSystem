@@ -83,16 +83,73 @@
 </nav>
 <!-- End navbar -->
 <div align="center">
-        <%
-    Message messages = (Message)request.getAttribute("messages");
-    if (messages!= null) {
-    %>
-    <h1>HII<%= messages.getContent()%></h1>
-    <%
-    } %>
-    </div>
-    
-</table>
+    <form action="Sessions.jsp" method ="post">
+   
+
+            <table>
+
+                <tr><td><b><font color="red">To:
+
+                    </td>
+
+                    <td><b><b><input type="text" name="mail" value="Enter sender mail-id"/><br/>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        <b><font color="red">Subject:
+
+                    </td>
+
+                    <td>
+
+                        <input type="text" name="sub" value="Enter Subject Line"><br/>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        <b><font color="red">Message Text:
+
+                    </td>
+
+                    <td>
+
+                        <textarea rows="12" cols="80" name="mess"></textarea><br/>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        <input type="submit" value="Send">
+
+                    </td>
+
+                    <td>
+
+                        <input type="reset" value="Reset">
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </form> 
+
 </div>
 </body>
 </html>

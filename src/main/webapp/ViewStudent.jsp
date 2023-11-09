@@ -104,11 +104,21 @@ if (list != null) {
         <td><% out.print(student.getUserId()); %></td>
         <td><% out.print(student.getPassword()); %></td>
         <td><% out.print(student.getName()); %></td>
+        <td>
+            <a href="editStudent.jsp?UserId=<%= student.getUserId() %>" class="btn btn-primary">Edit</a>
+        </td>
+        <td>
+            <form action="deleteStudent.jsp" method="post">
+                <input type="hidden" name="userId" value="<% out.print(student.getUserId()); %>">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+        </td>
     </tr>
 <%
     }
 }
 %>
+
 </table>
 </div>
 </div>

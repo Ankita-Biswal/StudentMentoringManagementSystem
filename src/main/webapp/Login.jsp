@@ -65,7 +65,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary btn-block badge-pill">Login</button>
                         <div class="text-center mt-3">	
-                            <a href="PasswordRecovery.jsp">Forgot Password?</a>
+                            <a href="forgotPassword.jsp">Forgot Password?</a>
                         </div>
                         <div class="text-center mt-3">
                             <a href="Register.jsp">Don't have an account?SignUp here.</a>
