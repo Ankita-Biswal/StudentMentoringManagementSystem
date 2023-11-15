@@ -1,11 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.List, SMMS.user.Message" %>
+
+    
 <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <title>Education Portal</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -62,19 +65,53 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Courses<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="Home.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sessions</a>
+                <a class="nav-link" href="#">Success</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Notifications</a>
+                <a class="nav-link" href="#">Feedback</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>
-        </div>
-<div>Hello jo</div>
-        </nav>
+        <form action="logout" method="post">
+    <button type="submit" class="btn btn-danger">Logout</button>
+</form>
+    </div>
+</nav>
+<!-- End navbar -->
+< <h1 align="center">Messages</h1>
+<div class="container">
+    <div align="center">
+        <table border="1">
+            <tr>
+                <th>Sender</th>
+                <th>Receiver</th>
+                <th>Message</th>
+                <th>Timestamp</th>
+            </tr>
+            <%
+                List<Message> messages = (List<Message>) request.getAttribute("messages");
+                if (messages != null) {
+                    for (Message message : messages) {
+            %>
+            <tr>
+                <td><% out.print(message.getSenderId()); %></td>
+                <td><% out.print(message.getReceiverId()); %></td>
+                <td><% out.print(message.getContent()); %></td>
+                <td><% out.print(message.getTimestamp()); %></td>
+            </tr>
+            <%
+                    }
+                }
+            %>
+        </table>
+<p>Table format</p>
+    </div>
+</div>
+</body>
+</html>

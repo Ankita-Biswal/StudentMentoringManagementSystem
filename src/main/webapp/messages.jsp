@@ -1,11 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.*, SMMS.user.Message" %>
+
 <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <title>Education Portal</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -62,19 +63,96 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Courses<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="Home.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sessions</a>
+                <a class="nav-link" href="Sessions.jsp">Session</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Notifications</a>
+                <a class="nav-link" href="#">Feedback</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>
-        </div>
-<div>Hello jo</div>
-        </nav>
+        <form action="logout" method="post">
+    <button type="submit" class="btn btn-danger">Logout</button>
+</form>
+    </div>
+</nav>
+<!-- End navbar -->
+<div align="center">
+    <form action="Sessions.jsp" method ="post">
+   
+
+            <table>
+
+                <tr><td><b><font color="red">To:
+
+                    </td>
+
+                    <td><b><b><input type="text" name="mail" value="Enter sender mail-id"/><br/>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        <b><font color="red">Subject:
+
+                    </td>
+
+                    <td>
+
+                        <input type="text" name="sub" value="Enter Subject Line"><br/>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        <b><font color="red">Message Text:
+
+                    </td>
+
+                    <td>
+
+                        <textarea rows="12" cols="80" name="mess"></textarea><br/>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        <input type="submit" value="Send">
+
+                    </td>
+
+                    <td>
+
+                        <input type="reset" value="Reset">
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </form> 
+
+</div>
+</body>
+</html>
+
+
+

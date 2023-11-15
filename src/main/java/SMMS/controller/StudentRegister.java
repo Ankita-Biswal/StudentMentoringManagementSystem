@@ -20,6 +20,7 @@ public class StudentRegister extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         RequestDispatcher rd = null;
+
         String userId = request.getParameter("UserId");
         String password = request.getParameter("Password");
         String name = request.getParameter("Name");

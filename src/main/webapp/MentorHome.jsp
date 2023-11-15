@@ -67,13 +67,10 @@
                 <a class="nav-link" href="ViewStudent">ViewStudent <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Courses</a>
+                <a class="nav-link" href="#">Student</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Reports</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="ViewFeedback">View<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="messages.jsp">Messages</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -95,7 +92,33 @@
         <h1>Welcome <%= mentor.getName()%></h1>
         <%
         } %>
-  
+    </div>
+<!--    <div align="center">
+<h1>Student Details</h1>
+<table border="1">
+<% 
+List<Student> list = (List)request.getAttribute("StudentData");
+%>
+<tr>
+<th>UserId</th>
+<th>Password</th>
+<th>Name</th>
+</tr>
+<% 
+if (list != null) {
+    for (Student student : list) {
+%>
+    <tr>
+        <td><% out.print(student.getUserId()); %></td>
+        <td><% out.print(student.getPassword()); %></td>
+        <td><% out.print(student.getName()); %></td>
+    </tr>
+<%
+    }
+}
+%>
+</table>
+</div>-->
 </div>
 </body>
 </html>
