@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1 align="center"> Password updated successfully!!!!!</h1>
+<h1 align="center"> data updated successfully!!!!!</h1>
    <a href="Login.jsp" class="btn btn-custom">Go to login</a>
 </body>
 </html>

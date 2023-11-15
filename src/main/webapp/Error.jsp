@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1 align="center"> Error in password generation sorry !!!!<h1>
+<h1 align="center"> Error in updating data Sorry !!!!<h1>
 </body>
 </html>

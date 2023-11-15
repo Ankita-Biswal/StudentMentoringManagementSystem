@@ -67,10 +67,13 @@
                 <a class="nav-link" href="Home.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="messages.jsp">Messages</a>
+                <a class="nav-link" href="Courses.jsp">Courses</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Feedback</a>
+                <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Feedback.jsp">Feedback</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

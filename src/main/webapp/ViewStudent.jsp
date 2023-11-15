@@ -50,6 +50,18 @@
             margin-top: 30px;
         }
     </style>
+    
+    <script>
+        <% 
+        String message = (String) request.getAttribute("message");
+        if (message != null && !message.isEmpty()) {
+        %>
+            window.onload = function() {
+                alert("<%= message %>");
+            }
+        <% } %>
+    </script>
+    
 </head>
 
 <body>
@@ -67,10 +79,10 @@
                 <a class="nav-link" href="Home.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Student</a>
+                <a class="nav-link" href="#">Courses</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">History</a>
+                <a class="nav-link" href="#">Reports</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -94,6 +106,8 @@ List<Student> list = (List)request.getAttribute("StudentData");
 <th>UserId</th>
 <th>Password</th>
 <th>Name</th>
+<th>Action</th>
+<th>Action</th>
 </tr>
 </center>
 <% 
@@ -104,12 +118,13 @@ if (list != null) {
         <td><% out.print(student.getUserId()); %></td>
         <td><% out.print(student.getPassword()); %></td>
         <td><% out.print(student.getName()); %></td>
+             <!-- Update button -->
         <td>
-            <a href="editStudent.jsp?UserId=<%= student.getUserId() %>" class="btn btn-primary">Edit</a>
+            <a href="editStudent.jsp"class="btn btn-primary">Edit</a>
         </td>
         <td>
-            <form action="deleteStudent.jsp" method="post">
-                <input type="hidden" name="userId" value="<% out.print(student.getUserId()); %>">
+            <form action="EditStudent" method="post">
+                <input type="hidden" name="UserId" value="<% out.print(student.getUserId()); %>">
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
         </td>
