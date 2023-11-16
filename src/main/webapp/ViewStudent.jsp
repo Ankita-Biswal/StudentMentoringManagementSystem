@@ -123,7 +123,7 @@ if (list != null) {
             <a href="editStudent.jsp"class="btn btn-primary">Edit</a>
         </td>
         <td>
-            <form action="EditStudent" method="post">
+            <form action="DeleteStud" method="post">
                 <input type="hidden" name="UserId" value="<% out.print(student.getUserId()); %>">
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>

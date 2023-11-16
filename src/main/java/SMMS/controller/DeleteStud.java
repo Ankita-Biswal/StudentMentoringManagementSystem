@@ -11,14 +11,14 @@ import SMMS.dao.StudentLogin;
 import SMMS.user.Student;/**
  * Servlet implementation class EditStudent
  */
-@WebServlet("/EditStudent")
-public class EditStudent extends HttpServlet {
+@WebServlet("/DeleteStud")
+public class DeleteStud extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EditStudent() {
+    public DeleteStud() {
         super();
         // TODO Auto-generated constructor stub
     }
