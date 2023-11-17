@@ -70,7 +70,7 @@
                 <a class="nav-link" href="viewCourse.jsp">Courses</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Reports</a>
+                <a class="nav-link" href="Report.jsp">Reports</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="ViewFeedback">View<span class="sr-only">(current)</span></a>
