@@ -77,7 +77,6 @@ public class Feedback {
                 e.printStackTrace();
             }
         }
-        System.out.println(list);
         return list;
     }
    

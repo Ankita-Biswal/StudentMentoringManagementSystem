@@ -102,9 +102,20 @@
 			aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="ViewStudent">ViewStudent <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="viewCourse.jsp">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Report.jsp">Reports</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ViewFeedback">View<span class="sr-only">(current)</span></a>
+            </li>
 				<li class="nav-item active"><a class="nav-link" href="design.jsp">Home
 						<span class="sr-only">(current)</span>
 				</a></li>
@@ -165,8 +176,8 @@ if(message!=null)
   <button type="submit" class="btn btn-primary">GENERATE</button>
   </div>
 </form>
- 
- 
+ </div>
+ </div>
  </div>
  </div>
  </div>

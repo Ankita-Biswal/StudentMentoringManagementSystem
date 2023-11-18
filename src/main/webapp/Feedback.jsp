@@ -94,9 +94,31 @@
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <!-- Navbar content -->
-    <!-- Update the href="#" to link it to the appropriate page -->
-</nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+			 <li class="nav-item active">
+                <a class="nav-link" href="Home.jsp">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Courses.jsp">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Feedback.jsp">Feedback</a>
+            </li>
+				<li class="nav-item active"><a class="nav-link" href="design.jsp">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="Login.jsp">Login</a>
+				</li>
+			</ul>
+			 <form action="logout" method="post">
+            <button type="submit" class="btn btn-danger">Logout</button>
+        </form>
+		</div>
+	</nav>
 <!-- End navbar -->
 
 <div class="container mt-5">

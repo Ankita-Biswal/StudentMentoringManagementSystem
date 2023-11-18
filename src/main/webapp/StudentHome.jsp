@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%@ page import="SMMS.user.Student" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="SMMS.dao.Filedao" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,6 +52,14 @@
             margin-top: 30px;
         }
     </style>
+    
+    <%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
+response.setHeader("Pragma", "no-cache"); // HTTP 1.0.
+response.setHeader("Expires", "0"); // Proxies.
+%>
+    
+    
 </head>
 
 <body>
@@ -96,7 +106,47 @@
     <%
     } %>
     </div>
-    
+</div>
+<div align="center">
+<h1> STUDENT TASKS TO BE DONE</h1>
+<table class="table">
+    <thead style="background-color: pink;">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Image</th>
+        <th scope="col">Task</th>
+      </tr>
+    </thead>
+    <tbody>
+   <%Connection con=Filedao.getCon();
+      
+   PreparedStatement ps=con.prepareStatement("select * from task");
+         ResultSet rs=ps.executeQuery();
+         
+       while(rs.next()){
+   %> 
+   
+     <tr>
+        <th scope="row"><%=rs.getInt("id")%></th>
+        <%if(rs.getString("files").endsWith(".pdf"))
+        	
+        	{%>
+        	 <td><img alt="" src="images/pdf.png" width="100px" height="100px"></td>
+        	<%}
+        	else if(rs.getString("files").endsWith(".xls")){%>
+        		 <td><img alt="" src="images/xls.png" width="100px" height="100px"></td>
+        	<% }
+        	else{%>
+        		 <td><img alt="" src="images/<%=rs.getString("files")%>" width="100px" height="100px"></td>	
+        	<% }
+        	%>
+       
+        <td> <%=rs.getString("task")%></td>
+      </tr>
+    <% }%>
+      
+    </tbody>
+  </table>
 </div>
 </body>
 </html>

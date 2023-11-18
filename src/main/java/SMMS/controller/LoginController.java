@@ -47,10 +47,12 @@ public class LoginController extends HttpServlet {
 
                 if (student != null) {
                     session.setAttribute("user", student);
+                    session.setAttribute("loginTime", System.currentTimeMillis()); 
                     response.sendRedirect("StudentHome.jsp");
                 }
                     else if(mentor !=null) {
                     session.setAttribute("user", mentor);
+                    session.setAttribute("loginTime", System.currentTimeMillis());
                     response.sendRedirect("MentorHome.jsp");
                     
                 } else {
