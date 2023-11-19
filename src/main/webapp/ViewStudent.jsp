@@ -62,15 +62,25 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+             <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="Home.jsp">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="ViewStudent">ViewStudent <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link" href="#">Student</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">History</a>
+=======
+                <a class="nav-link" href="viewCourse.jsp">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Report.jsp">Reports</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ViewFeedback">View<span class="sr-only">(current)</span></a>
+>>>>>>> d8b1e76682934d02db26ac66f8c1918e1c97195d
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -108,8 +118,13 @@ if (list != null) {
             <a href="editStudent.jsp?UserId=<%= student.getUserId() %>" class="btn btn-primary">Edit</a>
         </td>
         <td>
+<<<<<<< HEAD
             <form action="deleteStudent.jsp" method="post">
                 <input type="hidden" name="userId" value="<% out.print(student.getUserId()); %>">
+=======
+            <form action="DeleteStud" method="post">
+                <input type="hidden" name="UserId" value="<% out.print(student.getUserId()); %>">
+>>>>>>> d8b1e76682934d02db26ac66f8c1918e1c97195d
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
         </td>

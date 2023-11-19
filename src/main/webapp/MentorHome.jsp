@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page import="java.util.List" %>
+<%@ page import="java.sql.*" %>
+
 <%@ page import="SMMS.user.Mentor" %>
 <%@ page import="SMMS.user.Student" %>
+<%@ page import="SMMS.dao.Filedao" %>
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
@@ -49,7 +51,19 @@
         h1 {
             margin-top: 30px;
         }
+         form label {
+    color: black;
+    font-size:18px;
+  }
     </style>
+    
+    
+    <%
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
+response.setHeader("Pragma", "no-cache"); // HTTP 1.0.
+response.setHeader("Expires", "0"); // Proxies.
+%>
+    
 </head>
 
 <body>
@@ -67,10 +81,20 @@
                 <a class="nav-link" href="ViewStudent">ViewStudent <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link" href="#">Student</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="messages.jsp">Messages</a>
+=======
+                <a class="nav-link" href="viewCourse.jsp">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Report.jsp">Reports</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ViewFeedback">View<span class="sr-only">(current)</span></a>
+>>>>>>> d8b1e76682934d02db26ac66f8c1918e1c97195d
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -85,13 +109,16 @@
 <!-- End navbar -->
 <div class="container">
     <div align="center">
+    <div class="col-md-12">
         <%
         Mentor mentor = (Mentor) session.getAttribute("user");
         if (mentor != null) {
         %>
         <h1>Welcome <%= mentor.getName()%></h1>
         <%
+   
         } %>
+<<<<<<< HEAD
     </div>
 <!--    <div align="center">
 <h1>Student Details</h1>
@@ -119,6 +146,90 @@ if (list != null) {
 %>
 </table>
 </div>-->
+=======
+   
+   </div>     
+<div class="container mt-4 style="margin-top: 20px;">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card"> 
+        <div class="card-body"> 
+          <p class="text-center fs-3">Image Upload</p>
+          <%String message=(String)session.getAttribute("message");
+          if(message!=null){%>
+        	<h4 class="text-center text-success"><%=message%></h4>  
+          <% 
+          session.removeAttribute("message");
+          }
+          %>
+          
+          <form action="UploadFile" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="imageInput">Image</label>
+              <input type="file" id="imageInput" name="files" class="form-control"> 
+            </div>
+            <div class="mb-3">
+              <label for="taskInput">Task</label>
+              <input type="text" id="taskInput" name="task" class="form-control"> 
+            </div>
+            <div class="text-center">
+              <button class="btn btn-primary">Upload</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Image</th>
+        <th scope="col">Task</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+   <%Connection con=Filedao.getCon();
+      
+   PreparedStatement ps=con.prepareStatement("select * from task");
+         ResultSet rs=ps.executeQuery();
+         
+       while(rs.next()){
+   %> 
+   
+     <tr>
+        <th scope="row"><%=rs.getInt("id")%></th>
+        <%if(rs.getString("files").endsWith(".pdf"))
+        	
+        	{%>
+        	 <td><img alt="" src="images/pdf.png" width="100px" height="100px"></td>
+        	<%}
+        	else if(rs.getString("files").endsWith(".xls")){%>
+        		 <td><img alt="" src="images/xls.png" width="100px" height="100px"></td>
+        	<% }
+        	else{%>
+        		 <td><img alt="" src="images/<%=rs.getString("files")%>" width="100px" height="100px"></td>	
+        	<% }
+        	%>
+       
+        <td> <%=rs.getString("task")%></td>
+        <td>
+         <a href="DeleteFile?id=<%=rs.getInt("id")%>" class="btn btn-sm btn-danger">Delete</a>
+        </td>
+      </tr>
+    <% }%>
+      
+    </tbody>
+  </table>
+>>>>>>> d8b1e76682934d02db26ac66f8c1918e1c97195d
 </div>
+
+     
+     
+     
+     </div>
+     
+     </div>
 </body>
 </html>
