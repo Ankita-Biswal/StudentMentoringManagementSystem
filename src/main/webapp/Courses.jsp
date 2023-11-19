@@ -105,6 +105,18 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
+			 <li class="nav-item active">
+                <a class="nav-link" href="Home.jsp">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Courses.jsp">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Feedback.jsp">Feedback</a>
+            </li>
 				<li class="nav-item active"><a class="nav-link" href="design.jsp">Home
 						<span class="sr-only">(current)</span>
 				</a></li>
