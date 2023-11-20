@@ -60,7 +60,7 @@ public class UploadFile extends HttpServlet {
 	            	File file=new File(path);
 	                
 	            	p.write(path+File.separator+filename);
-	            	System.out.println(path);
+	            	//System.out.println(path);
 	            	session.setAttribute("message", "upload success!!");
 	            	
 	                response.sendRedirect("MentorHome.jsp");
