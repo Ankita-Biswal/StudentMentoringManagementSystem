@@ -93,11 +93,4 @@
 </style>
 </head>
 <body>
-<<<<<<< HEAD
-<h1 align="center"> Password updated successfully!!!!!</h1>
-   <a href="Login.jsp" class="btn btn-custom">Go to login</a>
-</body>
-</html>
-=======
 <h1>DATA UPDATED SUCCESSFULLY</h1>
->>>>>>> d8b1e76682934d02db26ac66f8c1918e1c97195d

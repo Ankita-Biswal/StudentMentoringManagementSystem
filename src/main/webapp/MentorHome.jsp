@@ -81,12 +81,6 @@ response.setHeader("Expires", "0"); // Proxies.
                 <a class="nav-link" href="ViewStudent">ViewStudent <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-<<<<<<< HEAD
-                <a class="nav-link" href="#">Student</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="messages.jsp">Messages</a>
-=======
                 <a class="nav-link" href="viewCourse.jsp">Courses</a>
             </li>
             <li class="nav-item">
@@ -94,7 +88,6 @@ response.setHeader("Expires", "0"); // Proxies.
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="ViewFeedback">View<span class="sr-only">(current)</span></a>
->>>>>>> d8b1e76682934d02db26ac66f8c1918e1c97195d
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -118,35 +111,6 @@ response.setHeader("Expires", "0"); // Proxies.
         <%
    
         } %>
-<<<<<<< HEAD
-    </div>
-<!--    <div align="center">
-<h1>Student Details</h1>
-<table border="1">
-<% 
-List<Student> list = (List)request.getAttribute("StudentData");
-%>
-<tr>
-<th>UserId</th>
-<th>Password</th>
-<th>Name</th>
-</tr>
-<% 
-if (list != null) {
-    for (Student student : list) {
-%>
-    <tr>
-        <td><% out.print(student.getUserId()); %></td>
-        <td><% out.print(student.getPassword()); %></td>
-        <td><% out.print(student.getName()); %></td>
-    </tr>
-<%
-    }
-}
-%>
-</table>
-</div>-->
-=======
    
    </div>     
 <div class="container mt-4 style="margin-top: 20px;">
@@ -203,10 +167,10 @@ if (list != null) {
         <%if(rs.getString("files").endsWith(".pdf"))
         	
         	{%>
-        	 <td><img alt="" src="images/pdf.png" width="100px" height="100px"></td>
+        	 <td><img alt="" src="images/pdf.jpg" width="100px" height="100px"></td>
         	<%}
         	else if(rs.getString("files").endsWith(".xls")){%>
-        		 <td><img alt="" src="images/xls.png" width="100px" height="100px"></td>
+        		 <td><img alt="" src="images/xls.jpg" width="100px" height="100px"></td>
         	<% }
         	else{%>
         		 <td><img alt="" src="images/<%=rs.getString("files")%>" width="100px" height="100px"></td>	
@@ -222,7 +186,6 @@ if (list != null) {
       
     </tbody>
   </table>
->>>>>>> d8b1e76682934d02db26ac66f8c1918e1c97195d
 </div>
 
      

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="SMMS.dao.StudentLogin" %>
 <%@ page import="SMMS.user.Student" %>
@@ -113,4 +111,3 @@
     
 </body>
 </html>
->>>>>>> d8b1e76682934d02db26ac66f8c1918e1c97195d

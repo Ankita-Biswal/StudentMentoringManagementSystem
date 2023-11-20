@@ -9,8 +9,8 @@ import java.io.IOException;
 
 @WebFilter(filterName = "LoginController", urlPatterns = { "/StudentHome.jsp", "/MentorHome.jsp" ,""})
 public class LoginFilter implements Filter {
-
-	    private static final long INSTANT_BACK_TIMEOUT = 10* 1000; // 2 minutes for instant back
+	
+	 private static final long MAX_SESSION_TIME = 30*10* 1000;
 
 	    @Override
 	    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -26,12 +26,12 @@ public class LoginFilter implements Filter {
 	            long currentTime = System.currentTimeMillis();
 	            long elapsedTime = currentTime - loginTime;
 
-	                if (elapsedTime < INSTANT_BACK_TIMEOUT) {
+	                if (elapsedTime < MAX_SESSION_TIME) {
 	                   
 	                    chain.doFilter(request, response); // Allow access without reauthentication
 	                    return;
 	                } else {
-	                    // Redirect to login if instant back timeout exceeded
+	           
 	                    res.sendRedirect("Login.jsp");
 	                    return;
 	                }

@@ -13,7 +13,7 @@ public class Filedao {
 	 public static Connection getCon() throws ClassNotFoundException, SQLException {
 		 try {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        con=DriverManager.getConnection("jdbc:mysql://localhost:3306/smms", "root", "Ankita@123");
+	        con=DriverManager.getConnection("jdbc:mysql://localhost:3306/smms", "root", "root");
 	    }
 	   catch(Exception e) {
 		   e.printStackTrace();

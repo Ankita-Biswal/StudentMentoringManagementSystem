@@ -77,10 +77,13 @@ response.setHeader("Expires", "0"); // Proxies.
                 <a class="nav-link" href="Home.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="messages.jsp">Messages</a>
+                <a class="nav-link" href="Courses.jsp">Courses</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Feedback</a>
+                <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Feedback.jsp">Feedback</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -128,10 +131,10 @@ response.setHeader("Expires", "0"); // Proxies.
         <%if(rs.getString("files").endsWith(".pdf"))
         	
         	{%>
-        	 <td><img alt="" src="images/pdf.png" width="100px" height="100px"></td>
+        	 <td><img alt="" src="images/pdf.jpg" width="100px" height="100px"></td>
         	<%}
         	else if(rs.getString("files").endsWith(".xls")){%>
-        		 <td><img alt="" src="images/xls.png" width="100px" height="100px"></td>
+        		 <td><img alt="" src="images/xls.jpg" width="100px" height="100px"></td>
         	<% }
         	else{%>
         		 <td><img alt="" src="images/<%=rs.getString("files")%>" width="100px" height="100px"></td>	

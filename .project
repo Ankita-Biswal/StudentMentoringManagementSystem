@@ -28,6 +28,33 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/main/webapp/css/Ementor.png</name>
+			<type>1</type>
+			<location>C:/Users/jenas/Downloads/Ementor.png</location>
+		</link>
+		<link>
+			<name>src/main/webapp/css/Login.png</name>
+			<type>1</type>
+			<location>C:/Users/jenas/Downloads/Login.png</location>
+		</link>
+		<link>
+			<name>src/main/webapp/css/wave.png</name>
+			<type>1</type>
+			<location>C:/Users/jenas/Desktop/wave.png</location>
+		</link>
+		<link>
+			<name>src/main/webapp/images/pdf.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/mca%20software/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/StudentMentoringManagementSystem/images/pdf.jpg</locationURI>
+		</link>
+		<link>
+			<name>src/main/webapp/images/xls.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/mca%20software/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/StudentMentoringManagementSystem/images/xls.jpg</locationURI>
+		</link>
+	</linkedResources>
 	<filteredResources>
 		<filter>
 			<id>1699973227437</id>

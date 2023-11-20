@@ -62,13 +62,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Courses<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="About.jsp">About<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sessions</a>
+                <a class="nav-link" href="Achievements.jsp">Achievements</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Notifications</a>
+                <a class="nav-link" href="contact.jsp">Contacts</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

@@ -50,6 +50,18 @@
             margin-top: 30px;
         }
     </style>
+    
+    <script>
+        <% 
+        String message = (String) request.getAttribute("message");
+        if (message != null && !message.isEmpty()) {
+        %>
+            window.onload = function() {
+                alert("<%= message %>");
+            }
+        <% } %>
+    </script>
+    
 </head>
 
 <body>
@@ -67,12 +79,6 @@
                 <a class="nav-link" href="ViewStudent">ViewStudent <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-<<<<<<< HEAD
-                <a class="nav-link" href="#">Student</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">History</a>
-=======
                 <a class="nav-link" href="viewCourse.jsp">Courses</a>
             </li>
             <li class="nav-item">
@@ -80,7 +86,6 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="ViewFeedback">View<span class="sr-only">(current)</span></a>
->>>>>>> d8b1e76682934d02db26ac66f8c1918e1c97195d
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -104,6 +109,8 @@ List<Student> list = (List)request.getAttribute("StudentData");
 <th>UserId</th>
 <th>Password</th>
 <th>Name</th>
+<th>Action</th>
+<th>Action</th>
 </tr>
 </center>
 <% 
@@ -114,17 +121,13 @@ if (list != null) {
         <td><% out.print(student.getUserId()); %></td>
         <td><% out.print(student.getPassword()); %></td>
         <td><% out.print(student.getName()); %></td>
+             <!-- Update button -->
         <td>
-            <a href="editStudent.jsp?UserId=<%= student.getUserId() %>" class="btn btn-primary">Edit</a>
+            <a href="editStudent.jsp"class="btn btn-primary">Edit</a>
         </td>
         <td>
-<<<<<<< HEAD
-            <form action="deleteStudent.jsp" method="post">
-                <input type="hidden" name="userId" value="<% out.print(student.getUserId()); %>">
-=======
             <form action="DeleteStud" method="post">
                 <input type="hidden" name="UserId" value="<% out.print(student.getUserId()); %>">
->>>>>>> d8b1e76682934d02db26ac66f8c1918e1c97195d
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
         </td>

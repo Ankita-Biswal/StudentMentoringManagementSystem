@@ -93,10 +93,4 @@
 </style>
 </head>
 <body>
-<<<<<<< HEAD
-<h1 align="center"> Error in password generation sorry !!!!<h1>
-</body>
-</html>
-=======
 <h1>ERROR IN UPDATION!!! SORRY</h1>
->>>>>>> d8b1e76682934d02db26ac66f8c1918e1c97195d

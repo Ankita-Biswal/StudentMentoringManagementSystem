@@ -60,7 +60,7 @@ public class UploadFile extends HttpServlet {
 	            	File file=new File(path);
 	                
 	            	p.write(path+File.separator+filename);
-	            	//System.out.println(path);
+	            	System.out.println(path);
 	            	session.setAttribute("message", "upload success!!");
 	            	
 	                response.sendRedirect("MentorHome.jsp");
@@ -79,7 +79,7 @@ public class UploadFile extends HttpServlet {
 
 		private Connection getConnection() throws ClassNotFoundException, SQLException {
 			 Class.forName("com.mysql.cj.jdbc.Driver");
-		        return DriverManager.getConnection("jdbc:mysql://localhost:3306/smms", "root", "Ankita@123");
+		        return DriverManager.getConnection("jdbc:mysql://localhost:3306/smms", "root", "root");
 		}
 		
 	}

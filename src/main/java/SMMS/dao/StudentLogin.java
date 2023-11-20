@@ -17,7 +17,7 @@ public class StudentLogin {
 
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/smms", "root", "Ankita@123");
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/smms", "root", "root");
     }
 
    
@@ -86,7 +86,71 @@ public class StudentLogin {
         return list;
     }
     
+    public Boolean updateStudent(String UserId, String newName, String newPassword) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        Boolean success=false;
+
+        try {
+            conn = getConnection();
+
+            String sql = "UPDATE students SET Name=?, Password=? WHERE UserId=?";
+            pstmt = conn.prepareStatement(sql);
+
+            pstmt.setString(1, newName);
+            pstmt.setString(2, newPassword);
+            pstmt.setString(3, UserId);
+
+            int rowsAffected = pstmt.executeUpdate();
+            if (rowsAffected > 0) {
+            	success=true;
+                System.out.println("Student updated successfully.");
+            } else {
+                System.out.println("No student found with UserId: " + UserId);
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        } 
+        return success;
+    }
    
+    
+    public void deleteStudent(String UserId) {
+    	 Connection conn = null;
+    	    PreparedStatement pstmt = null;
+
+    	    try {
+    	        conn = getConnection();
+
+    	        String sql = "DELETE FROM students WHERE UserId=?";
+    	        pstmt = conn.prepareStatement(sql);
+
+    	        pstmt.setString(1, UserId);
+
+    	        int rowsAffected = pstmt.executeUpdate();
+    	        if (rowsAffected > 0) {
+    	            System.out.println("Student deleted successfully.");
+    	        } else {
+    	            System.out.println("No student found with UserId: " + UserId);
+    	        }
+    	    } catch (SQLException | ClassNotFoundException e) {
+    	        e.printStackTrace();
+    	    } finally {
+    	        try {
+    	            if (conn != null) {
+    	                conn.close();
+    	            }
+    	            if (pstmt != null) {
+    	                pstmt.close();
+    	            }
+    	        } catch (SQLException e) {
+    	            e.printStackTrace();
+    	        }
+    	    }
+    	 
+    }
+
+
     }
 
 
