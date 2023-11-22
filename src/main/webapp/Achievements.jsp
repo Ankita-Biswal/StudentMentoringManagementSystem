@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-=======
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
->>>>>>> 1435cdb70b840ea88c9cd4ebbcb3dcba6f201e90
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Achievements</title>
@@ -149,7 +148,7 @@ p {
             <h2>Bhubaneswar (Odisha): Veteran actor and Makkal Needhi Maiam chief Kamal Haasan was conferred an honorary doctorate for his contribution to cinema, on November 19 in Bhubaneswar. The chief minister of Odisha, Naveen Patnaik, presented the doctorate degree to Haasan at an event.</h2>
             
         </div>
-=======
+
     <meta charset="ISO-8859-1">
     <title>Insert title here</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -178,9 +177,6 @@ img {
 </head>
 
 <body>
-    <div class="background-container">
-        <img src="images/achievement1.png" alt="Achievement" height="700" width="700">
->>>>>>> 1435cdb70b840ea88c9cd4ebbcb3dcba6f201e90
-    </div>
+  
 </body>
 </html>
