@@ -10,7 +10,7 @@ import java.io.IOException;
 @WebFilter(filterName = "LoginController", urlPatterns = { "/StudentHome.jsp", "/MentorHome.jsp" ,""})
 public class LoginFilter implements Filter {
 	
-	 private static final long MAX_SESSION_TIME = 10* 1000;// 2 minutes for instant back
+	 private static final long MAX_SESSION_TIME = 30*10* 1000;// 2 minutes for instant back
 
 	    @Override
 	    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)

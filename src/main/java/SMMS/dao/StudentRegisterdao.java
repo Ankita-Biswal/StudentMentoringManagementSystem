@@ -11,7 +11,7 @@ public class StudentRegisterdao {
         Connection connection = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/smms", "root", "Ankita@123");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/smms", "root", "root");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }

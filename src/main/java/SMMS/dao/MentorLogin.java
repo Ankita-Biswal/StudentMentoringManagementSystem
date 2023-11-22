@@ -14,7 +14,7 @@ public class MentorLogin {
 
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/smms", "root", "Ankita@123");
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/smms", "root", "root");
     }
     	public Mentor checkLogin1(String UserId, String Password) throws ClassNotFoundException {
 		  Connection con = null;

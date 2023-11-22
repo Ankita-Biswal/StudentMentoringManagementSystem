@@ -15,7 +15,7 @@ import SMMS.user.Feedbackuse;
 public class Feedback {
 	  public static Connection getConnection() throws ClassNotFoundException, SQLException {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
-	        return DriverManager.getConnection("jdbc:mysql://localhost:3306/smms", "root", "Ankita@123");
+	        return DriverManager.getConnection("jdbc:mysql://localhost:3306/smms", "root", "root");
 	    }
 
     public boolean submitFeedback(Feedbackuse feedback) throws ClassNotFoundException,IOException{
